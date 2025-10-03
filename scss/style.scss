@@ -1,0 +1,24 @@
+
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'header';
+@use 'hero';
+@use 'features';
+@use 'categories';
+@use 'popular';
+@use 'app';
+@use './testimonial';
+@use './footer';
+
+
+
+body, h1, h2, h3, p, ul, ol {
+  margin: 0;
+  padding: 0;
+  font-family: v.$font-stack;
+}
+
+
+// sass --watch scss/style.scss:css/style.css
+
+

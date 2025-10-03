@@ -1,0 +1,109 @@
+
+
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: v.$header-color;
+  color: v.$text-color;
+  font-family: v.$font-stack;
+
+ 
+   h1 {
+    font-size: 40px;
+   font-weight: 600;
+   margin: 0;
+   }
+
+  nav {
+   ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    li a {
+    color: v.$text-color;
+    text-decoration: none;
+    font-weight: 500;
+     font-size: 18px;
+ 
+    }
+   }
+ 
+}
+
+  .btn {
+   @include m.btn-style;
+   }
+
+  .menu-toggle {
+    display: none;
+   flex-direction: column;
+   gap: 5px;
+   cursor: pointer;
+   position: absolute;
+   top: 40px;
+   right: 30px;
+   z-index: 100;
+
+   span {
+   width: 25px;
+   height: 3px;
+   background-color: v.$text-color;
+   transition: all 0.3s ease;
+   }
+  }
+
+
+   @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+
+   nav {
+    width: 100%;
+    display: none;
+
+    ul {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px 0px;
+    }
+   }
+
+    .btn {
+     width: 100%;
+     flex-direction: column;
+     display: none;
+   }
+
+   .menu-toggle {
+    display: flex;
+   }
+
+   &.active {
+    nav, .btn {
+    display: flex;
+    flex-direction: column;
+    }
+
+   .menu-toggle span:nth-child(1) {
+   transform: rotate(45deg) translate(5px, 5px);
+   }
+     .menu-toggle span:nth-child(2) {
+       opacity: 0;
+      }
+     .menu-toggle span:nth-child(3) {
+     transform: rotate(-47deg) translate(6px, -6px);
+     }
+   }
+  }
+}
+
+
+
+ 
+

@@ -1,0 +1,47 @@
+// mixins
+@use 'variables' as v;
+@mixin btn-style {
+  display: flex;
+  gap: 1rem;
+       @media (max-width: 768px) {
+     justify-content: center;
+    }
+
+  button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+     
+
+    &.login {
+      background-color: v.$btn-color;
+      color: #fff;
+
+      &:hover {
+        opacity: v.$btn-hover-opacity;
+      }
+  
+    }
+
+    &.signup {
+      background-color: transparent;
+      border: 1px solid v.$text-color;
+      color: #fff;
+
+      &:hover {
+        opacity: v.$btn-hover-opacity;
+      }
+    
+    }
+  }
+}
+// foooter
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

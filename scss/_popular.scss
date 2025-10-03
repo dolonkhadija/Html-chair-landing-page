@@ -1,0 +1,84 @@
+// popular section
+@use 'variables' as v;
+
+.popular-section {
+  padding: 100px;
+
+     @media (max-width: 768px) {
+  padding: 30px;
+    }
+   .contain{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .div1{
+      .h2{
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+      
+        @media (max-width: 768px) {
+          font-size: 32px; 
+        }
+      }
+      .p222{
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 0px;
+        line-height: 1.5;
+       
+        @media (max-width: 768px) {
+          font-size: 16px; 
+          text-align: center;
+        }
+      
+  
+      }
+    }
+    .div2{
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+       @media (max-width: 768px) {
+         flex-wrap: wrap;
+        }
+      .flex-box{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+           @media (max-width: 768px) {
+         grid-template-columns: 1fr;
+        }
+        .box{
+            background-color: v.$section-color;
+            padding: 20px;
+            border-radius: 10px;
+            color: v.$text-color;
+            img{
+              width: 100%;
+            }
+            .pb{
+              font-size: 25px;
+              font-size: 600;
+              padding: 10px 0;
+            }
+            .pm{
+              font-size: 18px;
+              font-weight: 500;
+            }
+            .p2{
+              font-size: 20px;
+              padding: 10px 0;
+            }
+        }
+      }
+    }
+  }
+}
+    
+
+
+
+    
+
+   

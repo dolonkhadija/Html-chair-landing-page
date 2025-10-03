@@ -1,0 +1,63 @@
+@use 'variables' as v;
+
+.testmonial-section{
+  padding: 100px;
+     @media (max-width: 768px) {
+  padding: 30px;
+    }
+  .h2{
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+      
+        @media (max-width: 768px) {
+          font-size: 32px; 
+        }
+      }
+      .p222{
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+       
+        @media (max-width: 768px) {
+          font-size: 16px; 
+          text-align: center;
+        }
+        
+}
+.testmonial-section{
+
+.slider{
+  display: flex;
+  gap: 20px;
+      @media (max-width: 768px) {
+    flex-wrap: wrap;
+    text-align: center;
+        }
+  .card{
+    background-color: v.$section-color;
+    color: v.$text-color;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+       @media (max-width: 768px) {
+        width: 100%;
+    flex-wrap: wrap;
+    img{
+      width: 100%;
+    }
+   
+        }
+    .text-p{
+      width: 200px;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 10px 0;
+    }
+  }
+}
+}
+}

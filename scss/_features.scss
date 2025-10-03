@@ -1,0 +1,63 @@
+@use 'variables' as v;
+.features-section {
+  padding: 100px;
+  background-color: v.$section-color;
+  color: v.$text-color;
+     @media (max-width: 768px) {
+  padding: 30px;
+    }
+    .contain{
+      .div1,.div2 {
+     .h2{
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+      
+        @media (max-width: 768px) {
+          font-size: 32px; 
+        }
+      }
+      .p111{
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 0px;
+        line-height: 1.5;
+       
+        @media (max-width: 768px) {
+          font-size: 16px; 
+          text-align: center;
+        }
+      }
+  }
+    }
+.div2{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0px;
+  flex-wrap: wrap;
+}
+.img-box img{
+  width: 100%;
+
+}
+
+.text-box,.icon{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  i{
+    font-size: 20px;
+    font-style: normal;
+  }
+
+}
+.icon i{
+  font-size: 30px;
+
+}
+.fa-solid{
+  margin-right: 20px;
+}
+  }

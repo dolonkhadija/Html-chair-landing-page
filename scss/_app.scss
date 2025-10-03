@@ -1,0 +1,52 @@
+
+@use 'variables' as v;
+
+.app-section {
+  background-color: v.$section-color;
+  padding: 100px;
+  color: v.$text-color;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+ .content {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 40px; 
+  flex-wrap: wrap;
+
+  .image-wrapper {
+    flex: 0 0 auto;
+   img {
+    max-width: 90%; 
+    height: auto;   
+    display: block;
+
+     
+   }
+  }
+  .text-wrapper {
+    flex: 1;
+   
+  }
+    .app-h3 {
+      font-size: 25px;
+      font-weight: 500;
+
+      @media (max-width: 768px) {
+        font-size: 32px; 
+      }
+    }
+
+    .app-p {
+      font-size: 20px;
+      line-height: 1.5;
+      padding: 20px 0;
+      @media (max-width: 768px) {
+        font-size: 16px; 
+      }
+    }
+}
+}

@@ -1,0 +1,76 @@
+@use 'variables' as v; 
+@use 'mixins' as m;
+
+
+.hero{
+  background-color: v.$section-color;
+  color: v.$text-color;
+  min-height: 90vh; 
+      @media (max-width: 768px) {
+    min-height: 50vh;
+    }
+
+  .container{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+   padding-left: 100px;
+   padding-right: 30px;
+   
+    @media (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      
+    }
+
+    .hero-text{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 40%;
+      @media (max-width: 768px) {
+        width: 100%; 
+       text-align: center;
+      }
+
+      // h2, p, .btn এর অন্যান্য স্টাইল...
+      h2{
+        padding-top: 50px;
+        font-size: 50px;
+        font-weight: 700;
+      
+        @media (max-width: 768px) {
+          font-size: 32px; 
+        }
+      }
+      p{
+        font-size: 20px;
+        line-height: 1.5;
+        @media (max-width: 768px) {
+          font-size: 16px; 
+        }
+      }
+      .btn{
+        @include m.btn-style;
+      }
+    } 
+    
+    .hero-images{
+      width: 60%;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      img{
+       width: 60%;
+      }
+      
+
+      @media (max-width: 768px) {
+        width: 100%;
+        align-items: center; 
+      }
+    }
+  } 
+} 
